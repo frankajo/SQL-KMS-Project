@@ -99,14 +99,21 @@ WHERE Region = 'Ontario' AND Product_Sub_Category = 'Appliances';
 ### 4. 📉 Revenue from the Bottom 10 Customers
 
 ```sql
-SELECT TOP 10 Customer_Name, SUM(Sales) AS Total_Revenue
-FROM [KMS Sql Case Study]
-GROUP BY Customer_Name
-ORDER BY Total_Revenue ASC;
+Select Top 10 
+Customer_Name,
+Region,
+Order_Quantity,
+Discount,
+Sum(Sales) as [Total Sales],
+Sum(Profit) as [Total Profit]
+from [KMS Sql Case Study]
+group by Customer_Name, Region, Order_Quantity, Discount
+Order by [Total Sales] Asc;
 ```
 ![4](https://github.com/user-attachments/assets/192dd443-61f4-4733-9d7c-6892717e409e)
 
 **Insight**: The bottom 10 customers contribute minimally to revenue and may benefit from promotional targeting.
+Introduce a “Buy X, Get Y Free” strategy or referral bonuses.
 
 ### 5. 🚚 Which shipping method incurred the most cost?
 
