@@ -44,7 +44,9 @@ The dataset includes retail transactions from 2009 to 2012 with fields such as:
 
 Preprocessing was done in Excel to properlly reformat the date column, the prices columns into currency and standardize headers. 
 SQL Server was used for querying.
+
 [Download the project dataset here](https://github.com/frankajo/SQL-KMS-Project/blob/main/KMS%20Sql%20Case%20Study.csv)
+[Download the project dataset here](https://github.com/frankajo/SQL-KMS-Project/blob/main/Order_Status.csv)
 
 ---
 
