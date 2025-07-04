@@ -111,8 +111,11 @@ Order by [Total Sales] Asc;
 ```
 ![4](https://github.com/user-attachments/assets/fa11e60d-0171-420d-a6fa-1ba31a464072)
 
-**Insight**: The bottom 10 customers contribute minimally to revenue and may benefit from promotional targeting.
-Introduce a “Buy X, Get Y Free” strategy or referral bonuses.
+**Insight**: In consideration with the top 10 customers, Discount or Region is not the the reason for their poor patronage. I advise the management of KMS to..
+* Send short surveys to learn why they’re not buying more.
+* Offer exclusive discounts or loyalty points to motivate purchases.
+* Offer free shipping or cashback for second-time purchases.
+* Introduce a “Buy X, Get Y Free” strategy or referral bonuses.
 
 #### 5. Which shipping method incurred the most cost?
 
