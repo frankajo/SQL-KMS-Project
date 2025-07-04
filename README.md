@@ -47,9 +47,9 @@ SQL Server was used for querying.
 
 ---
 
-## 🧩 Case Scenario I: Sales Performance
+### 🧩 Case Scenario I: Sales Performance
 
-### 1. 🏆 Which product category had the highest sales?
+#### 1. 🏆 Which product category had the highest sales?
 
 ```sql
 SELECT TOP 1 Product_Category, SUM(Sales) AS Highest_Sale
@@ -61,7 +61,7 @@ ORDER BY Highest_Sale DESC;
 
 **Insight**: The "Technology" category recorded the highest total sales.
 
-### 2. What are the Top 3 and Bottom 3 regions in terms of sales?
+#### 2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
 **Top 3 Regions**
 
@@ -85,7 +85,7 @@ ORDER BY Total_Sales ASC;
 
 **Insight**: Western and Eastern regions dominate sales. Northern region underperforms.
 
-### 3. What were the total sales of appliances in Ontario?
+#### 3. What were the total sales of appliances in Ontario?
 
 ```sql
 SELECT SUM(Sales) AS Ontario_Appliance_Sales
@@ -96,7 +96,7 @@ WHERE Region = 'Ontario' AND Product_Sub_Category = 'Appliances';
 
 **Insight**: Appliances sales in Ontario amounted to a significant total but were not the top-performing product.
 
-### 4.  Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers 
+#### 4.  Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers 
 
 ```sql
 Select Top 10 Customer_Name, Region, Order_Quantity, Discount,
@@ -111,7 +111,7 @@ Order by [Total Sales] Asc;
 **Insight**: The bottom 10 customers contribute minimally to revenue and may benefit from promotional targeting.
 Introduce a “Buy X, Get Y Free” strategy or referral bonuses.
 
-### 5. Which shipping method incurred the most cost?
+#### 5. Which shipping method incurred the most cost?
 
 ```sql
 SELECT TOP 1 Ship_Mode, SUM(Shipping_Cost) AS Max_Shipping_Cost
@@ -125,9 +125,9 @@ ORDER BY Max_Shipping_Cost DESC;
 
 ---
 
-## 👤 Case Scenario II: Customer Insights
+### 👤 Case Scenario II: Customer Insights
 
-### 6. Who are the most valuable customers, and what products do they purchase?
+#### 6. Who are the most valuable customers, and what products do they purchase?
 
 ```sql
 SELECT TOP 10 Customer_Name, Product_Name,
@@ -140,7 +140,7 @@ ORDER BY Total_Profit DESC;
 
 **Insight**: A small group of customers contribute significantly to overall profit.
 
-### 7. Which Small Business customer had the highest sales?
+#### 7. Which Small Business customer had the highest sales?
 
 ```sql
 SELECT TOP 1 Customer_Name, SUM(Sales) AS Highest_Sales
@@ -153,7 +153,7 @@ ORDER BY Highest_Sales DESC;
 
 **Insight**: Identifies the top-performing small business for potential upsell or retention efforts.
 
-### 8. 🗓️ Which Corporate Customer placed the most orders (2009–2012)?
+#### 8. 🗓️ Which Corporate Customer placed the most orders (2009–2012)?
 
 ```sql
 SELECT TOP 1 Customer_Name, COUNT(Order_ID) AS Number_Of_Orders
@@ -165,9 +165,8 @@ ORDER BY Number_Of_Orders DESC;
 ```
 ![8](https://github.com/user-attachments/assets/32f4e1f7-afbf-4422-839f-08e58360ff75)
 
-**Insight**: Shows repeat Corporate buyers and helps segment high-frequency clients.
 
-### 9. Which Consumer customer was the most profitable?
+#### 9. Which Consumer customer was the most profitable?
 
 ```sql
 SELECT TOP 1 Customer_Name, SUM(Profit) AS Most_Profit
@@ -180,7 +179,7 @@ ORDER BY Most_Profit DESC;
 
 **Insight**: Single out the most profitable consumer for potential case study or feedback.
 
-### 10. Which customers returned items, and what segment do they belong to?
+#### 10. Which customers returned items, and what segment do they belong to?
 
 ```sql
 SELECT DISTINCT Ods.Order_ID, Kms.Customer_Name,
@@ -190,9 +189,9 @@ JOIN Order_Status AS Ods ON Kms.Order_ID = Ods.Order_ID;
 ```
 ![10](https://github.com/user-attachments/assets/e4bd4902-cda9-49ae-a3da-125782801c02)
 
-**Insight**: Return behavior is visible across segments; helps with quality checks.
+**Insight**: Return behavior is visible across segments; About 573 customers returned products.
 
-### 11. 🚛 Did KMS appropriately spend shipping costs by Order Priority?
+#### 11. Did KMS appropriately spend shipping costs by Order Priority?
 
 ```sql
 SELECT Order_Priority, Ship_Mode,
@@ -218,27 +217,16 @@ GROUP BY Order_Priority, Ship_Mode;
 
 ---
 
-## 🛠 Tools & Technologies
+### 🛠 Tools & Technologies
 
 * SQL Server Management Studio (SSMS)
 * Excel (Data preparation)
-* Power BI (Optional visualization)
 * GitHub (Documentation)
 
 ---
 
-## 📁 Project Structure
 
-| File/Folder | Description                     |
-| ----------- | ------------------------------- |
-| `queries/`  | SQL queries grouped by scenario |
-| `data/`     | Cleaned dataset (CSV or Excel)  |
-| `visuals/`  | Power BI or Excel screenshots   |
-| `README.md` | Project documentation           |
-
----
-
-## ✅ Conclusion
+### ✅ Conclusion
 
 This case study provided a data-driven approach to uncovering key opportunities and challenges within KMS. The findings offer practical ways to improve revenue, optimize shipping operations, and strengthen customer relationships using SQL-powered analysis.
 
