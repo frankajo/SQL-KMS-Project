@@ -52,7 +52,7 @@ SQL Server was used for querying.
 
 ### 🧩 Case Scenario I: Sales Performance
 
-#### 1. 🏆 Which product category had the highest sales?
+#### 1. Which product category had the highest sales?
 
 ```sql
 SELECT TOP 1 Product_Category, SUM(Sales) AS Highest_Sale
@@ -159,7 +159,7 @@ ORDER BY Highest_Sales DESC;
 
 **Insight**: Identifies the top-performing small business for potential upsell or retention efforts.
 
-#### 8. 🗓️ Which Corporate Customer placed the most orders (2009–2012)?
+#### 8. Which Corporate Customer placed the most orders (2009–2012)?
 
 ```sql
 SELECT TOP 1 Customer_Name, COUNT(Order_ID) AS Number_Of_Orders
