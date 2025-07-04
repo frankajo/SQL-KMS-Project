@@ -121,13 +121,13 @@ ORDER BY Max_Shipping_Cost DESC;
 ```
 ![5](https://github.com/user-attachments/assets/a70e842b-be65-42bb-9607-90069737b14f)
 
-**Insight**: "Express Air" had the highest shipping cost, confirming management concerns.
+**Insight**: "Delivery Truck" had the highest shipping cost, confirming management concerns.
 
 ---
 
 ## 👤 Case Scenario II: Customer Insights
 
-### 6. 💎 Who are the most valuable customers, and what products do they purchase?
+### 6. Who are the most valuable customers, and what products do they purchase?
 
 ```sql
 SELECT TOP 10 Customer_Name, Product_Name,
@@ -136,10 +136,11 @@ FROM [KMS Sql Case Study]
 GROUP BY Customer_Name, Product_Name
 ORDER BY Total_Profit DESC;
 ```
+![6](https://github.com/user-attachments/assets/51eaef73-bd51-44e7-9270-f1e1c401d3f8)
 
 **Insight**: A small group of customers contribute significantly to overall profit.
 
-### 7. 🧾 Which Small Business customer had the highest sales?
+### 7. Which Small Business customer had the highest sales?
 
 ```sql
 SELECT TOP 1 Customer_Name, SUM(Sales) AS Highest_Sales
@@ -148,6 +149,7 @@ WHERE Customer_Segment = 'Small Business'
 GROUP BY Customer_Name
 ORDER BY Highest_Sales DESC;
 ```
+![7](https://github.com/user-attachments/assets/83a357e1-8109-4d16-a356-8075f5271372)
 
 **Insight**: Identifies the top-performing small business for potential upsell or retention efforts.
 
@@ -161,10 +163,11 @@ WHERE Customer_Segment = 'Corporate'
 GROUP BY Customer_Name
 ORDER BY Number_Of_Orders DESC;
 ```
+![8](https://github.com/user-attachments/assets/32f4e1f7-afbf-4422-839f-08e58360ff75)
 
 **Insight**: Shows repeat Corporate buyers and helps segment high-frequency clients.
 
-### 9. 💰 Which Consumer customer was the most profitable?
+### 9. Which Consumer customer was the most profitable?
 
 ```sql
 SELECT TOP 1 Customer_Name, SUM(Profit) AS Most_Profit
@@ -173,10 +176,11 @@ WHERE Customer_Segment = 'Consumer'
 GROUP BY Customer_Name
 ORDER BY Most_Profit DESC;
 ```
+![9](https://github.com/user-attachments/assets/cace091d-9415-4f59-8cf2-e7aa9a2340b3)
 
 **Insight**: Single out the most profitable consumer for potential case study or feedback.
 
-### 10. 🔁 Which customers returned items, and what segment do they belong to?
+### 10. Which customers returned items, and what segment do they belong to?
 
 ```sql
 SELECT DISTINCT Ods.Order_ID, Kms.Customer_Name,
@@ -184,6 +188,7 @@ SELECT DISTINCT Ods.Order_ID, Kms.Customer_Name,
 FROM [KMS Sql Case Study] AS Kms
 JOIN Order_Status AS Ods ON Kms.Order_ID = Ods.Order_ID;
 ```
+![10](https://github.com/user-attachments/assets/e4bd4902-cda9-49ae-a3da-125782801c02)
 
 **Insight**: Return behavior is visible across segments; helps with quality checks.
 
@@ -197,6 +202,7 @@ SELECT Order_Priority, Ship_Mode,
 FROM [KMS Sql Case Study]
 GROUP BY Order_Priority, Ship_Mode;
 ```
+![11](https://github.com/user-attachments/assets/0c9bc94e-482c-4c7e-9280-33adf322868d)
 
 **Insight**: Confirms mismatch between urgency (priority) and cost/time spent on shipping. Opportunity for optimization.
 
