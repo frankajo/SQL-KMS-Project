@@ -127,7 +127,7 @@ ORDER BY Max_Shipping_Cost DESC;
 ```
 ![5](https://github.com/user-attachments/assets/a70e842b-be65-42bb-9607-90069737b14f)
 
-**Insight**: "Delivery Truck" had the highest shipping cost, confirming management concerns.
+**Insight**: "Delivery Truck" incure the most shipping cost, confirming management concerns.
 
 ---
 
