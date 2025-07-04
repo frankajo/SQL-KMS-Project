@@ -57,12 +57,11 @@ FROM [KMS Sql Case Study]
 GROUP BY Product_Category
 ORDER BY Highest_Sale DESC;
 ```
-![1](https://github.com/user-attachments/assets/6a96f29d-ccb2-4939-b8e2-80c15c552cf4)
-
+![1](https://github.com/user-attachments/assets/c767f5ac-5f07-40da-96f1-3f5faea36e9e)
 
 **Insight**: The "Technology" category recorded the highest total sales.
 
-### 2. 🌍 What are the Top 3 and Bottom 3 regions in terms of sales?
+### 2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
 **Top 3 Regions**
 
@@ -72,6 +71,7 @@ FROM [KMS Sql Case Study]
 GROUP BY Region
 ORDER BY Total_Sales DESC;
 ```
+![top3](https://github.com/user-attachments/assets/342d9913-0ac6-46f7-b154-fca1a34f6065)
 
 **Bottom 3 Regions**
 
@@ -81,7 +81,7 @@ FROM [KMS Sql Case Study]
 GROUP BY Region
 ORDER BY Total_Sales ASC;
 ```
-![2](https://github.com/user-attachments/assets/4c5b5924-0de9-4d63-9d00-66d5e73ab052)
+![bottom3](https://github.com/user-attachments/assets/6fb2e5a6-be54-4856-81ff-7b92e0e9f689)
 
 **Insight**: Western and Eastern regions dominate sales. Northern region underperforms.
 
@@ -92,30 +92,26 @@ SELECT SUM(Sales) AS Ontario_Appliance_Sales
 FROM [KMS Sql Case Study]
 WHERE Region = 'Ontario' AND Product_Sub_Category = 'Appliances';
 ```
-![3](https://github.com/user-attachments/assets/4fed9b17-82b3-4b6e-9b48-f57b3f82b1ec)
+![3](https://github.com/user-attachments/assets/17de9f79-52e2-46bd-9b8b-1cfbba2e8539)
 
 **Insight**: Appliances sales in Ontario amounted to a significant total but were not the top-performing product.
 
-### 4. 📉 Revenue from the Bottom 10 Customers
+### 4.  Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers 
 
 ```sql
-Select Top 10 
-Customer_Name,
-Region,
-Order_Quantity,
-Discount,
+Select Top 10 Customer_Name, Region, Order_Quantity, Discount,
 Sum(Sales) as [Total Sales],
 Sum(Profit) as [Total Profit]
 from [KMS Sql Case Study]
 group by Customer_Name, Region, Order_Quantity, Discount
 Order by [Total Sales] Asc;
 ```
-![4](https://github.com/user-attachments/assets/192dd443-61f4-4733-9d7c-6892717e409e)
+![4](https://github.com/user-attachments/assets/fa11e60d-0171-420d-a6fa-1ba31a464072)
 
 **Insight**: The bottom 10 customers contribute minimally to revenue and may benefit from promotional targeting.
 Introduce a “Buy X, Get Y Free” strategy or referral bonuses.
 
-### 5. 🚚 Which shipping method incurred the most cost?
+### 5. Which shipping method incurred the most cost?
 
 ```sql
 SELECT TOP 1 Ship_Mode, SUM(Shipping_Cost) AS Max_Shipping_Cost
@@ -123,6 +119,7 @@ FROM [KMS Sql Case Study]
 GROUP BY Ship_Mode
 ORDER BY Max_Shipping_Cost DESC;
 ```
+![5](https://github.com/user-attachments/assets/a70e842b-be65-42bb-9607-90069737b14f)
 
 **Insight**: "Express Air" had the highest shipping cost, confirming management concerns.
 
