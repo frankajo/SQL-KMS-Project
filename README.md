@@ -8,32 +8,31 @@ May Almighty continue to bless protect you. We love you…
 
 ---
 
-# 📊 KMS SQL Case Study: Sales, Customers & Shipping Analysis
+## KMS SQL Case Study: Sales, Customers & Shipping Analysis
 
 ---
 
-## 🧾 Project Overview
+### 🧾 Project Overview
 
 KMS is a retail company aiming to better understand the performance of its sales, customer segments, product categories, and shipping costs. Using SQL, this project analyzes the sales dataset to extract actionable business insights that support decision-making across customer targeting, regional expansion, and cost management.
 
 ---
 
-## ❗ Problem Statement
+### Problem Statement
 
 KMS management lacks visibility into the key drivers of revenue, profitability, and shipping costs. Strategic decisions are currently based on assumptions rather than data-driven insights.
 
 ---
 
-## 🎯 Project Objectives
+### 🎯 Project Objectives
 
-* Identify high- and low-performing product categories and regions
 * Discover the most and least profitable customers
 * Analyze shipping methods and costs relative to order priorities
 * Provide data-backed recommendations to increase revenue and optimize costs
 
 ---
 
-## 📊 Dataset Summary
+### 📊 Dataset Summary
 
 The dataset includes retail transactions from 2009 to 2012 with fields such as:
 
@@ -41,8 +40,10 @@ The dataset includes retail transactions from 2009 to 2012 with fields such as:
 * `Product_Category`, `Product_Sub_Category`, `Product_Name`
 * `Region`, `Sales`, `Profit`, `Shipping_Cost`, `Ship_Mode`
 * `Order_Date`, `Ship_Date`, `Order_Priority`
+* * `Status_Status`
 
-Preprocessing was done in Excel to remove trailing blank rows and standardize headers. SQL Server was used for querying.
+Preprocessing was done in Excel to properlly reformat the date column, the prices columns into currency and standardize headers. 
+SQL Server was used for querying.
 
 ---
 
@@ -56,6 +57,8 @@ FROM [KMS Sql Case Study]
 GROUP BY Product_Category
 ORDER BY Highest_Sale DESC;
 ```
+![1](https://github.com/user-attachments/assets/6a96f29d-ccb2-4939-b8e2-80c15c552cf4)
+
 
 **Insight**: The "Technology" category recorded the highest total sales.
 
