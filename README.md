@@ -81,16 +81,18 @@ FROM [KMS Sql Case Study]
 GROUP BY Region
 ORDER BY Total_Sales ASC;
 ```
+![2](https://github.com/user-attachments/assets/4c5b5924-0de9-4d63-9d00-66d5e73ab052)
 
 **Insight**: Western and Eastern regions dominate sales. Northern region underperforms.
 
-### 3. 🛋️ What were the total sales of appliances in Ontario?
+### 3. What were the total sales of appliances in Ontario?
 
 ```sql
 SELECT SUM(Sales) AS Ontario_Appliance_Sales
 FROM [KMS Sql Case Study]
 WHERE Region = 'Ontario' AND Product_Sub_Category = 'Appliances';
 ```
+![3](https://github.com/user-attachments/assets/4fed9b17-82b3-4b6e-9b48-f57b3f82b1ec)
 
 **Insight**: Appliances sales in Ontario amounted to a significant total but were not the top-performing product.
 
@@ -102,6 +104,7 @@ FROM [KMS Sql Case Study]
 GROUP BY Customer_Name
 ORDER BY Total_Revenue ASC;
 ```
+![4](https://github.com/user-attachments/assets/192dd443-61f4-4733-9d7c-6892717e409e)
 
 **Insight**: The bottom 10 customers contribute minimally to revenue and may benefit from promotional targeting.
 
